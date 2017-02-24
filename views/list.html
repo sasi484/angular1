@@ -1,0 +1,27 @@
+<h3>To-Do-List!</h3>
+    <nav class="navbar navbar-default row">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav">
+            </ul></br>
+           
+<table border="2"> 
+  <th>Task Name</th> 
+   <th>Date</th>
+    <th>Action</th>
+    <th>Action</th>
+    
+     <tr ng-repeat = "task in taskList| filter: {is_complete: false}">  
+      <td>{{task.name}}</td>
+       <td>{{task.date | date : "dd/MM/yyyy" }}</td>
+        <td><a ng-click="updatetask(task)" href="javascript:;">Completed</a></td>
+        <td><a ng-click="deletetask(task)" href="javascript:;">Delete</a></td>
+         </tr>
+          </table>
+</br></br> </br></br> </br> </br>  
+  
+  <button ng-click = "Completedlist()">Completed List</button>  
+  <button type = "icon-plus" ng-click = "newtask()">New Task</button>  
+   </div>
+    </div>
+     </nav>

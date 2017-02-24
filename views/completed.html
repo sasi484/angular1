@@ -1,0 +1,23 @@
+<h3>CompletedList!</h3>
+    <nav class="navbar navbar-default row">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav">
+            </ul></br>
+           
+<table border="2"> 
+  <th>Task Name</th> 
+   <th>Completed Date</th>
+    
+    <tr ng-repeat = "task in taskList| filter: {is_complete: true}">  
+     <td>{{task.name}}</td>
+      <td>{{task.date | date : "dd/MM/yyyy"}}</td>
+       </tr>
+        </table>
+
+   </br></br>
+   <a ng-click="todolist()" href="javascript:;">To-Do-List</a>  
+</br></br> </br></br> </br> </br>  
+  </div>
+   </div>
+    </nav>

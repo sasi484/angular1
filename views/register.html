@@ -1,0 +1,33 @@
+<h3>User Register!</h3>
+  <nav class="navbar navbar-default row">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav">
+          </ul></br>
+<div>
+  <form name="userForm"></br>
+    <label>User Name :</br></label>
+      <input type="text" id= "userName" name= "userName" ng-model="user.userName" ng-pattern = "/[a-zA-Z]/" required /></br>
+        <div ng-messages = "userForm.userName.$error">
+          <div ng-message = "required">*User Name is required</div>
+            <div ng-message = "pattern">*User Name is invalid</div>
+              </div></br>
+<label>Password :</br></label>
+  <input type="password" id="password" name="password" ng-model="user.password" required/></br>
+    <div ng-messages = "userForm.password.$error">
+      <div ng-message = "required">*Password is required</div><br/>
+        </div>
+          <label>ConfirmPassword :</br></label>
+            <input type="password" id="confirmPassword" name="confirmPassword" 
+               ng-model="user.confirmPassword" required compare-to='user.password' />
+              <div ng-messages = "userForm.confirmPassword.$error">
+                <div ng-message = "required">*Confirm Password is required</div><br/>
+                  <div ng-message = "compareTo">*Confirm Password does not match</div>
+                    </div>
+             
+<label>Mobile :</br></label>
+  <input type="number" id="number" name="number" ng-model="user.number"></br></br>
+    <button ng-click="saveuser(user)" ng-disabled="userForm.$invalid">Save</button>
+       <button type="reset" ng-click="resetuserForm()">Reset</button>
+        </form>
+          </div>

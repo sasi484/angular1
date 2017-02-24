@@ -1,0 +1,25 @@
+
+  <h3>Enter Task Details!</h3>
+    <nav class="navbar navbar-default row">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <ul class="nav navbar-nav">
+            </ul></br>
+ <form name="uform">           
+<label>Task Name : </br></label>
+  <input type="text" id="taskName" name="taskName" ng-model="task.name" ng-pattern = "/[a-zA-Z]/"           required/></br>
+    <div ng-messages = "uform.taskName.$error">
+      <div ng-message = "required">*Task Name is required</div>
+        <div ng-message = "pattern">*Task Name is invalid</div>
+         </div> </br>
+ <label>Complete Date : </br></label>
+   <input type="date" id="date" name="date" ng-model="task.date"></br></br>
+     <div ng-messages = "uform.date.$error">
+       <div ng-message = "required">*Date is required</div>
+         </div> </br>
+
+ 
+
+        <button ng-click="savetask(task)" ng-disabled="uform.$invalid">Save Task</button>
+          <button type="reset" ng-click="resetuform()">Reset</button>
+          </form>        
